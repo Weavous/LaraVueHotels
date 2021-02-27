@@ -1,5 +1,20 @@
 <h2 align="center">LaraVueHotels</h2>
 
+<p align="center">
+    <a href="#">
+        <img alt="License" src="https://img.shields.io/github/license/Weavous/LaraVueHotels">
+    </a>
+    <a href="#">
+        <img alt="License" src="https://img.shields.io/github/languages/count/Weavous/LaraVueHotels">
+    </a>
+    <a href="#">
+        <img alt="License" src="https://img.shields.io/github/last-commit/Weavous/LaraVueHotels">
+    </a>
+    <a href="#">
+        <img alt="License" src="https://img.shields.io/github/followers/MagicalStrangeQuark?style=social">
+    </a>
+</p>
+
 <p align="center">Development of an application to find houses for rent</p>
 
 <h4 align="center">Teste Prático - WebQuarto</h4>
@@ -37,3 +52,15 @@
 • Inclua nos projeto as migrations usadas para criar a estrutura do banco de dados.
 
 • Chave da api do GoogleMaps a ser usada: `AIzaSyAguy7ew8yFFChGqWNsmbWzn_OkfgCF-mE`
+
+<h6 align="center">Comandos</h6>
+
+```bash
+    composer create-project laravel/laravel backend
+```
+
+```bash
+    cd backend
+    
+    php artisan serve
+```
