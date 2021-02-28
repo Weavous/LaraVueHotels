@@ -64,3 +64,33 @@
     
     php artisan serve
 ```
+
+```bash
+    php artisan make:model Address -a
+
+    php artisan make:model Property -a
+```
+
+```sql
+    CREATE DATABASE laravel;
+
+    SHOW DATABASES;
+
+    USE laravel;
+
+    SHOW TABLES;
+```
+
+```bash
+    php artisan migrate:fresh --seed
+```
+
+```bash
+    vue init webpack-simple frontend
+
+    cd frontend
+
+    npm install
+
+    npm run dev
+```
