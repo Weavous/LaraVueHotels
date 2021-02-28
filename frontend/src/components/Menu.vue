@@ -19,8 +19,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="nav-item d-flex align-items-center">
-            <a class="nav-link" href="#">
-              <i class="bi bi-person-fill"></i> Profile</a>
+            <a class="nav-link" href="#"><i class="bi bi-person-fill"></i> Profile</a>
           </li>
           <li class="nav-item">
             <div class="nav-link">
