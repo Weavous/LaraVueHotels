@@ -1,6 +1,6 @@
 <template>
   <select @change="change" v-model="current" class="form-select">
-    <option v-for="(address, key) in this.data" v-bind:value="address.id" :key="key" >
+    <option v-for="(address, key) in this.data" v-bind:value="address.id" :key="key">
       {{ `${address.state} - ${address.city} - ${address.street}` }}
     </option>
   </select>
@@ -28,6 +28,10 @@ export default {
 
       if (this.id > 0) {
         this.current = this.id;
+      } else {
+        let el = this.data.find((n) => n.id > 0);
+
+        this.current = el.id;
       }
     });
   },
