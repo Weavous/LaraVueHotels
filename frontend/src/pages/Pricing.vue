@@ -1,6 +1,6 @@
 <template>
   <div class="container p-3">
-    <div class="row">
+    <div class="row mb-5">
       <div v-for="(property, key) in data" class="col-md-4 mt-2" :key="key">
         <Card :data="{ property }"></Card>
       </div>
