@@ -13,7 +13,7 @@
 
       <div class="col">
         <label>State</label>
-        <Addresses @onchange="change"></Addresses>
+        <Addresses v-if="this.loaded === true" @onchange="change" :id="this.address_id"></Addresses>
       </div>
     </div>
 
@@ -45,9 +45,16 @@ export default {
       description: "",
       price: 0,
       address_id: 0,
+      loaded: false
     };
   },
   components: { Addresses },
+  props: {
+    id: {
+      required: false,
+      default: 0
+    }
+  },
   methods: {
     store() {
       if (
@@ -68,6 +75,20 @@ export default {
       this.address_id = id;
     },
   },
+  mounted() {
+    if(this.id > 0) {
+      const response = properties.show(this.id);
+
+      response.then(data => {
+          this.title = data.data.title;
+          this.description = data.data.description;
+          this.price = data.data.price;
+          this.address_id = data.data.address_id;
+
+          this.loaded = true;
+      });
+    }
+  }
 };
 </script>
 
