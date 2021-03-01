@@ -31,6 +31,12 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
     npm install babel-preset-es2015 --save-dev
 ```
 
+<h6 align="center">Router</h6>
+
+```bash
+    npm install vue-router --save
+```
+
 `.babelrc`
 
 ```bash
