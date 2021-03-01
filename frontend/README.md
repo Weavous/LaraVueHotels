@@ -37,6 +37,12 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
     npm install vue-router --save
 ```
 
+<h6 align="center">Axios</h6>
+
+```bash
+    npm	install	axios --save
+```
+
 `.babelrc`
 
 ```bash
