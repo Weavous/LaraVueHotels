@@ -26,7 +26,8 @@
 
     <div class="row">
       <div class="col">
-        <button type="submit" @click="store" class="btn btn-success w-100 mt-2">Register</button>
+        <button v-if="this.id === 0" type="submit" @click="store" class="btn btn-success w-100 mt-2">Register</button>
+        <button v-if="this.id > 0" type="submit" @click="store" class="btn btn-success w-100 mt-2">Update</button>
       </div>
     </div>
   </div>
@@ -43,17 +44,17 @@ export default {
     return {
       title: "",
       description: "",
-      price: 0,
+      price: "",
       address_id: 0,
-      loaded: false
+      loaded: false,
     };
   },
   components: { Addresses },
   props: {
     id: {
       required: false,
-      default: 0
-    }
+      default: 0,
+    },
   },
   methods: {
     store() {
@@ -63,12 +64,22 @@ export default {
         this.title.price > 0 ||
         this.title.address_id > 0
       ) {
-        properties.store({
-          title: this.title,
-          description: this.description,
-          price: this.price,
-          address_id: this.address_id,
-        });
+        if (this.id > 0) {
+          properties.update({
+            id: this.id,
+            title: this.title,
+            description: this.description,
+            price: this.price,
+            address_id: this.address_id,
+          });
+        } else {
+            properties.store({
+            title: this.title,
+            description: this.description,
+            price: this.price,
+            address_id: this.address_id,
+          });
+        }
       }
     },
     change(id) {
@@ -76,19 +87,19 @@ export default {
     },
   },
   mounted() {
-    if(this.id > 0) {
+    if (this.id > 0) {
       const response = properties.show(this.id);
 
-      response.then(data => {
-          this.title = data.data.title;
-          this.description = data.data.description;
-          this.price = data.data.price;
-          this.address_id = data.data.address_id;
-
-          this.loaded = true;
+      response.then((data) => {
+        this.title = data.data.title;
+        this.description = data.data.description;
+        this.price = data.data.price;
+        this.address_id = data.data.address_id;
       });
     }
-  }
+
+    this.loaded = true;
+  },
 };
 </script>
 
