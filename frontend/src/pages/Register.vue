@@ -1,64 +1,73 @@
 <template>
   <div class="container p-3">
-    <form>
-      <div class="row">
-        <div class="col">
-          <label for="inputEmail4">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" />
-        </div>
-
-        <div class="col">
-          <label for="inputPassword4">Password</label>
-          <input type="password" class="form-control" id="inputPassword4" />
-        </div>
+    <div class="row">
+      <div class="col">
+        <label>Title</label>
+        <input type="email" v-model="title" class="form-control" required />
       </div>
 
-      <div class="row">
-        <div class="col">
-          <label for="inputAddress">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" />
-        </div>
+      <div class="col">
+        <label>Price</label>
+        <input type="text" v-model="price" class="form-control" required />
       </div>
 
-      <div class="row">
-        <div class="col">
-          <label for="inputAddress2">Address 2</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
-        </div>
+      <div class="col">
+        <label>State</label>
+        <Addresses @onchange="change"></Addresses>
       </div>
+    </div>
 
-      <div class="row">
-        <div class="col">
-          <label for="inputCity">City</label>
-          <input type="text" class="form-control" id="inputCity" />
-        </div>
-
-        <div class="col">
-          <label for="inputState">State</label>
-          <select id="inputState" class="form-control">
-            <option selected>Choose...</option>
-            <option>...</option>
-          </select>
-        </div>
-
-        <div class="col">
-          <label for="inputZip">Zip</label>
-          <input type="text" class="form-control" id="inputZip" />
-        </div>
+    <div class="row">
+      <div class="col">
+        <label>Description</label>
+        <input type="text" v-model="description" class="form-control" required />
       </div>
+    </div>
 
-      <div class="row">
-        <div class="col">
-          <button type="submit" class="btn btn-primary w-100 mt-2">Sign in</button>
-        </div>
+    <div class="row">
+      <div class="col">
+        <button type="submit" @click="store" class="btn btn-success w-100 mt-2">Register</button>
       </div>
-    </form>
+    </div>
   </div>
 </template>
 
 <script>
+import Addresses from "../components/Addresses.vue";
+
+import properties from "../services/properties.js";
+
 export default {
   name: "Register",
+  data() {
+    return {
+      title: "",
+      description: "",
+      price: 0,
+      address_id: 0,
+    };
+  },
+  components: { Addresses },
+  methods: {
+    store() {
+      if (
+        this.title.length > 0 ||
+        this.title.description > 0 ||
+        this.title.price > 0 ||
+        this.title.address_id > 0
+      ) {
+        properties.store({
+          title: this.title,
+          description: this.description,
+          price: this.price,
+          address_id: this.address_id,
+        });
+      }
+    },
+    change(id) {
+      this.address_id = id;
+    },
+  },
 };
 </script>
 
