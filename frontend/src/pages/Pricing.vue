@@ -22,7 +22,7 @@ export default {
     };
   },
   mounted() {
-    properties.all().then((response) => {
+    properties.index().then((response) => {
       this.data = response.data;
     });
   },
