@@ -1,5 +1,5 @@
 <template>
-  <select class="form-control" required>
+  <select @change="change" v-model="current" class="form-select">
     <option v-for="(address, key) in this.data" v-bind:value="address.id" :key="key">
       {{ `${address.state} - ${address.city} - ${address.street}` }}
     </option>
@@ -14,12 +14,18 @@ export default {
   data() {
     return {
       data: [],
+      current: 0,
     };
   },
   mounted() {
     addresses.index().then((response) => {
       this.data = response.data;
     });
+  },
+  methods: {
+    change() {
+      this.$emit("onchange", this.current);
+    },
   },
 };
 </script>
