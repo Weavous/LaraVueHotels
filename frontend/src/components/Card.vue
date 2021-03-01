@@ -12,7 +12,9 @@
         </div>
         <div class="col-2 col-md-2">
           <i class="bi bi-blockquote-left"></i>
-          <i class="bi bi-grid-3x3-gap-fill" title="Edit this record?"></i>
+            <router-link v-bind:to="`property/${this.data.property.id}`" class="text-decoration-none text-dark">
+              <i class="bi bi-grid-3x3-gap-fill" title="Edit this record?"></i>
+            </router-link>
         </div>
       </div>
     </div>
