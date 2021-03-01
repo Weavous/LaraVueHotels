@@ -8,6 +8,7 @@ import Home from './pages/Home.vue';
 import Register from './pages/Register.vue';
 import Pricing from './pages/Pricing.vue';
 import About from './pages/About.vue';
+import Property from './pages/Property.vue';
 
 const router = new VueRouter({
   mode: 'history',
@@ -15,6 +16,7 @@ const router = new VueRouter({
     { path: '/', component: Home },
     { path: '/register', component: Register },
     { path: '/pricing', component: Pricing },
+    { path: '/property/:id', component: Property, props: true },
     { path: '/about', component: About },
   ]
 });
