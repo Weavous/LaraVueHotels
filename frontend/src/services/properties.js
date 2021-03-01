@@ -1,5 +1,6 @@
 import { http } from './config.js';
 
 export default {
-    all: () => { return http.get('/properties') }
+    index: () => { return http.get('/properties') },
+    store: (data) => { return http.post('/properties', data) }
 }
