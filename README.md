@@ -21,13 +21,13 @@
 
 • Crie uma aplicação, usando `Laravel 7+`, `Vue.JS 2+` e `Bootstrap 3` ou `4` que contenha as seguintes funcionalidades:
     
-    ◦ Cadastro de anúncio de imóveis com as seguintes informações: Titulo, foto, descrição, valor do aluguel e endereço.
+◦ Cadastro de anúncio de imóveis com as seguintes informações: Titulo, foto, descrição, valor do aluguel e endereço.
 
-    ◦ Crie também as demais operações básicas para os anúncios: atualização e remoção.
+◦ Crie também as demais operações básicas para os anúncios: atualização e remoção.
 
-    ◦ Crie uma tela de visualização que me permita ver os detalhes do anúncio cadastrado.
+◦ Crie uma tela de visualização que me permita ver os detalhes do anúncio cadastrado.
         
-        ▪ Tente incluir nessa tela um mapa com um marcador no local no endereço do imóvel. Isso pode ser feito através da api do GoogleMaps (Use esta chave da api: AIzaSyAguy7ew8yFFChGqWNsmbWzn_OkfgCF-mE)
+▪ Tente incluir nessa tela um mapa com um marcador no local no endereço do imóvel. Isso pode ser feito através da api do GoogleMaps (Use esta chave da api: AIzaSyAguy7ew8yFFChGqWNsmbWzn_OkfgCF-mE)
 
 <h6 align="center">Tarefas opcionais (Tente executar, se tiver tempo)</h6>
 
