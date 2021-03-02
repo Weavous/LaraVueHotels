@@ -7,14 +7,15 @@
     </div>
     <div class="card-footer">
       <div class="row">
-        <div class="col-10 col-md-10">
+        <div class="col-9 col-md-9">
           <small class="text-muted">Last updated {{ new Date(this.data.property.updated_at).toDateString() }}</small>
         </div>
-        <div class="col-2 col-md-2">
+        <div class="col-3 col-md-3">
           <i class="bi bi-blockquote-left"></i>
-            <router-link v-bind:to="`register/${this.data.property.id}`" class="text-decoration-none text-dark">
-              <i class="bi bi-grid-3x3-gap-fill" title="Edit this record?"></i>
-            </router-link>
+          <router-link v-bind:to="`register/${this.data.property.id}`" class="text-decoration-none text-dark">
+            <i class="bi bi-grid-3x3-gap-fill" title="Edit this record?"></i>
+          </router-link>
+          <i class="bi bi-x-square" title="Delete this record?" @click="del"></i>
         </div>
       </div>
     </div>
@@ -22,6 +23,8 @@
 </template>
 
 <script>
+import properties from "../services/properties.js";
+
 export default {
   name: "Card",
   props: {
@@ -31,10 +34,17 @@ export default {
     },
   },
   filters: {
-    str32(text){
+    str32(text) {
       return text.substring(0, 32);
-    }
-  }
+    },
+  },
+  methods: {
+    del() {
+      if (this.data.property.id > 0) {
+        properties.delete(this.data.property.id);
+      }
+    },
+  },
 };
 </script>
 
