@@ -35,12 +35,7 @@ class PropertyController extends Controller
      */
     public function store(Request $request)
     {
-        return \App\Models\Property::create([
-            "title" => $request->title,
-            "description" => $request->description,
-            "price" => $request->price,
-            "address_id" => $request->address_id
-        ]);
+        return \App\Models\Property::create($request->all());
     }
 
     /**
