@@ -43,7 +43,7 @@
 
     <div class="row mt-4">
       <div class="col d-flex justify-content-center">
-        <NearProperty></NearProperty>
+        <NearProperty v-if="loaded === true" :lat="{ lat }" :lng="{ lng }" :id="{ id }"></NearProperty>
       </div>
     </div>
 
@@ -126,10 +126,13 @@ export default {
         this.address_id = data.data.address_id;
         this.lat = data.data.lat;
         this.lng = data.data.lng;
+
+        this.loaded = true;
       });
+    } else {
+      this.loaded = true;
     }
 
-    this.loaded = true;
 
     this.map = new google.maps.Map(document.getElementById("map"), { center: new google.maps.LatLng(-29, -49), zoom: 6, mapTypeId: google.maps.MapTypeId.ROADMAP });
   },
