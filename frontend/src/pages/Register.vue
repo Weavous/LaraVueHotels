@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-3">
+  <div class="container p-3 mb-5">
     <div class="row">
       <div class="col">
         <label>Title</label>
@@ -41,6 +41,12 @@
       </div>
     </div>
 
+    <div class="row mt-4">
+      <div class="col d-flex justify-content-center">
+        <NearProperty></NearProperty>
+      </div>
+    </div>
+
     <div class="row">
       <div class="col">
         <button v-if="this.id === 0" type="submit" @click="store" class="btn btn-success w-100 mt-2">Register</button>
@@ -52,6 +58,7 @@
 
 <script>
 import Addresses from "../components/Addresses.vue";
+import NearProperty from "../components/NearProperty.vue";
 
 import properties from "../services/properties.js";
 
@@ -69,7 +76,7 @@ export default {
       lng: 0,
     };
   },
-  components: { Addresses },
+  components: { Addresses, NearProperty },
   props: {
     id: {
       required: false,
@@ -79,10 +86,10 @@ export default {
   methods: {
     store() {
       if (
-        this.title.length > 0 ||
-        this.title.description > 0 ||
-        this.title.price > 0 ||
-        this.title.address_id > 0
+        this.title.length > 0 &&
+        this.description.length > 0 &&
+        this.price > 0 &&
+        this.address_id > 0
       ) {
         const data = {
           title: this.title,
