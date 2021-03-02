@@ -21,4 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::prefix("v1")->group(function () {
     Route::resource("addresses", \App\Http\Controllers\AddressController::class);
     Route::resource("properties", \App\Http\Controllers\PropertyController::class);
+    Route::get('/nearestproperties/{lat}/{lng}', [App\Domain\GEO\NearestProperty::class, 'index']);
 });
