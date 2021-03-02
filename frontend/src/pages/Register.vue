@@ -53,6 +53,19 @@
         <button v-if="this.id > 0" type="submit" @click="store" class="btn btn-success w-100 mt-2">Update</button>
       </div>
     </div>
+
+    <div class="row mt-2">
+      <div class="col" v-if="success === true">
+        <div class="alert alert-success" role="alert">
+          Data has been saved successfully!
+        </div>
+      </div>
+      <div class="col" v-if="error === true">
+        <div class="alert alert-danger" role="alert">
+          Certain fields are not filled!
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -74,6 +87,8 @@ export default {
       map: {},
       lat: 0,
       lng: 0,
+      success: false,
+      error: false
     };
   },
   components: { Addresses, NearProperty },
@@ -105,6 +120,12 @@ export default {
         } else {
           properties.store(data);
         }
+
+        this.success = true;
+        this.error = false;
+      } else {
+        this.success = false;
+        this.error = true;
       }
     },
     attrpos() {
@@ -132,7 +153,6 @@ export default {
     } else {
       this.loaded = true;
     }
-
 
     this.map = new google.maps.Map(document.getElementById("map"), { center: new google.maps.LatLng(-29, -49), zoom: 6, mapTypeId: google.maps.MapTypeId.ROADMAP });
   },
