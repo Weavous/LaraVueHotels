@@ -10,7 +10,7 @@ class GeographicCoordinate
     /**
      * Constructor.
      * 
-     * @param void
+     * @param float $n
      */
     private function __construct(float $n)
     {
@@ -20,11 +20,11 @@ class GeographicCoordinate
     /**
      * Get an instance.
      * 
-     * @param void
+     * @param float $n
      * 
      * @return Self
      */
-    public static function create(float $n)
+    public static function create(float $n): Self
     {
         return new Self($n);
     }
@@ -38,7 +38,7 @@ class GeographicCoordinate
      */
     public function degrees(): int
     {
-        return (int) $this->data;
+        return $this->data;
     }
 
     /**
@@ -50,9 +50,7 @@ class GeographicCoordinate
      */
     public function minutes(): int
     {
-        $n = (float) ($this->data - $this->degrees()) * 60;
-
-        return abs(abs($n) - abs($n) - (int) abs($n)) * (abs($n) === $n ? 1 : -1);
+        return abs(($this->data - $this->degrees()) * 60) * $this->signal();
     }
 
     /**
@@ -60,10 +58,22 @@ class GeographicCoordinate
      * 
      * @param void
      * 
-     * @return double
+     * @return float
      */
     public function seconds(): float
     {
-        return number_format((((abs($this->data) - abs($this->degrees())) * 60) - abs($this->minutes())) * 60, 4) * (abs($this->data) === $this->data ? 1 : -1);
+        return number_format((((abs($this->data) - abs($this->degrees())) * 60) - abs($this->minutes())) * 60, 4) * $this->signal();
+    }
+
+    /**
+     * Signal.
+     * 
+     * @param void
+     * 
+     * @return int
+     */
+    private function signal(): int
+    {
+        return abs($this->data) === $this->data ? 1 : -1;
     }
 }
