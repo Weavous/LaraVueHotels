@@ -94,3 +94,18 @@
 
     npm run dev
 ```
+
+<h6 align="center">Tests</h6>
+
+
+```bash
+    php artisan make:test GeographicCoordinateTest --unit
+
+    php artisan make:test GeolocatorTest --unit
+
+    php artisan make:test PythagorasTest --unit
+```
+
+```bash
+    php artisan test
+```
