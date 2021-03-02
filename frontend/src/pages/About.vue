@@ -6,7 +6,6 @@
         <h2 class="display-5 fw-normal">Lorem Ipsum</h2>
         <p class="lead fw-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed odio a odio laoreet posuere ac vitae nisi.</p>
         <p>Pellentesque nec euismod enim, vel viverra ante. Sed sit amet ornare sem. Vestibulum eu ante pharetra, hendrerit odio in, elementum lacus. Nunc id dictum quam. Vivamus quam turpis, consectetur sit amet egestas eu, elementum efficitur quam. Donec tellus quam, viverra gravida fermentum suscipit, sodales sed eros.</p>
-        <a href="https://icons.getbootstrap.com/" class="btn btn-lg btn-outline-primary mb-3">Get Bootstrap Icons</a>
       </div>
     </div>
   </div>
