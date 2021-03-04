@@ -23,14 +23,17 @@ export default {
     lat: {
       required: true,
       default: 0,
+      type: Object
     },
     lng: {
       required: true,
       default: 0,
+      type: Object
     },
     id: {
       required: true,
       default: 0,
+      type: Object
     },
   },
   mounted() {
