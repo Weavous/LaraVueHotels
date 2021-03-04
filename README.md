@@ -95,7 +95,7 @@
     npm run dev
 ```
 
-<h6 align="center">Tests</h6>
+<h6 align="center">Tests XDEBUG</h6>
 
 
 ```bash
@@ -107,5 +107,5 @@
 ```
 
 ```bash
-    php artisan test
+    php artisan test --testdox --coverage-html reports/
 ```
