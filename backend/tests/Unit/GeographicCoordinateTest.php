@@ -35,4 +35,32 @@ class GeographicCoordinateTest extends TestCase
         $this->assertEquals($lng->minutes(), -7);
         $this->assertEquals($lng->seconds(), -8.9954);
     }
+
+    /**
+     * Tests 180 degree conversion.
+     * 
+     * @param void
+     */
+    public function test_180_degrees()
+    {
+        $test_180_degrees = \App\Domain\Math\GeographicCoordinate::create(180);
+
+        $this->assertEquals($test_180_degrees->degrees(), 180);
+        $this->assertEquals($test_180_degrees->minutes(), 0);
+        $this->assertEquals($test_180_degrees->seconds(), 0);
+    }
+
+    /**
+     * Tests 0 degree conversion.
+     * 
+     * @param void
+     */
+    public function test_0_degrees()
+    {
+        $test_0_degrees = \App\Domain\Math\GeographicCoordinate::create(0);
+
+        $this->assertEquals($test_0_degrees->degrees(), 0);
+        $this->assertEquals($test_0_degrees->minutes(), 0);
+        $this->assertEquals($test_0_degrees->seconds(), 0);
+    }
 }
