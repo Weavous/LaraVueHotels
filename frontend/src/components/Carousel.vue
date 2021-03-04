@@ -1,12 +1,12 @@
 <template>
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-      <CarouselUnit :active="true" src="/dist/69fkgMaR17dKzlFZk2mISw==.jpg"></CarouselUnit>
-      <CarouselUnit src="/dist/dOenEgVlg2jdrtMVmEcpJw==.jpg"></CarouselUnit>
-      <CarouselUnit src="/dist/p6Nuvr9O2Ehn262106yIYA==.jpg"></CarouselUnit>
-      <CarouselUnit src="/dist/PAFJS+4Qzmpcq7USrC87Ug==.jpg"></CarouselUnit>
-      <CarouselUnit src="/dist/RPykgNArgIVEQ4XlogcSOg==.jpg"></CarouselUnit>
-      <CarouselUnit src="/dist/ScPtazXyWQz2b9u94Loiw==.jpg"></CarouselUnit>
+      <CarouselUnit :active="true" src="/src/assets/carousel/69fkgMaR17dKzlFZk2mISw==.jpg"></CarouselUnit>
+      <CarouselUnit src="/src/assets/carousel/dOenEgVlg2jdrtMVmEcpJw==.jpg"></CarouselUnit>
+      <CarouselUnit src="/src/assets/carousel/p6Nuvr9O2Ehn262106yIYA==.jpg"></CarouselUnit>
+      <CarouselUnit src="/src/assets/carousel/PAFJS+4Qzmpcq7USrC87Ug==.jpg"></CarouselUnit>
+      <CarouselUnit src="/src/assets/carousel/RPykgNArgIVEQ4XlogcSOg==.jpg"></CarouselUnit>
+      <CarouselUnit src="/src/assets/carousel/ScPtazXyWQz2b9u94Loiw==.jpg"></CarouselUnit>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
