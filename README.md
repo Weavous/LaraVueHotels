@@ -95,8 +95,21 @@
     npm run dev
 ```
 
-<h6 align="center">Tests XDEBUG</h6>
+<h6 align="center">XDEBUG</h6>
 
+```bash
+    https://xdebug.org/files/php_xdebug-3.0.3-8.0-vs16-nts-x86_64.dll
+```
+
+```bash
+    zend_extension=C:\php-8.0.0-nts-Win32-vs16-x64\ext\php_xdebug-3.0.3-8.0-vs16-nts-x86_64.dll
+```
+
+```bash
+    xdebug.mode=coverage
+```
+
+<h6 align="center">Tests</h6>
 
 ```bash
     php artisan make:test GeographicCoordinateTest --unit
