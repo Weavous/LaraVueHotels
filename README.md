@@ -122,3 +122,21 @@
 ```bash
     php artisan test --testdox --coverage-html reports/
 ```
+
+<h6 align="center">Images</h6>
+
+<p align="center">
+    <img width="75%" height="50%" src="pricing.png" alt="Pricing">
+</p>
+
+<p align="center">
+    <img width="75%" height="50%" src="home.png" alt="Home">
+</p>
+
+<p align="center">
+    <img width="75%" height="50%" src="about.png" alt="About">
+</p>
+
+<p align="center">
+    <img width="75%" height="50%" src="register-with-id.png" alt="Register">
+</p>
