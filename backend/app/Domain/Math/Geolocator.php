@@ -10,6 +10,9 @@ class Geolocator
     /** @var \App\Domain\Math\GPS */
     private \App\Domain\Math\GPS $posy;
 
+    /** @var int */
+    private const NAUTICAL_MILE = 1852;
+
     /**
      * Constructor.
      * 
@@ -70,6 +73,6 @@ class Geolocator
      */
     public function arc2dist(): float
     {
-        return \App\Domain\Math\Pythagoras::calc(($this->dla() / 60) * 1852, ($this->dlo() / 60) * 1852);
+        return \App\Domain\Math\Pythagoras::calc(($this->dla() / 60) * self::NAUTICAL_MILE, ($this->dlo() / 60) * self::NAUTICAL_MILE);
     }
 }
