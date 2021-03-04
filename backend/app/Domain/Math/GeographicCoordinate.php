@@ -1,11 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Domain\Math;
 
 class GeographicCoordinate
 {
     /** @var float */
-    private $data = 0;
+    private float $data = 0;
 
     /**
      * Constructor.
@@ -38,7 +40,7 @@ class GeographicCoordinate
      */
     public function degrees(): int
     {
-        return $this->data;
+        return (int) $this->data;
     }
 
     /**
@@ -50,7 +52,7 @@ class GeographicCoordinate
      */
     public function minutes(): int
     {
-        return abs(($this->data - $this->degrees()) * 60) * $this->signal();
+        return (int) abs(($this->data - $this->degrees()) * 60) * $this->signal();
     }
 
     /**
