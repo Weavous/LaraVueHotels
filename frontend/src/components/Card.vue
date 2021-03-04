@@ -10,7 +10,7 @@
         <div class="col-9 col-md-9">
           <small class="text-muted">Last updated {{ new Date(this.data.property.updated_at).toDateString() }}</small>
         </div>
-        <div class="col-3 col-md-3">
+        <div class="col-3 col-md-3 text-nowrap">
           <i class="bi bi-blockquote-left"></i>
           <router-link v-bind:to="`register/${this.data.property.id}`" class="text-decoration-none text-dark">
             <i class="bi bi-grid-3x3-gap-fill" title="Edit this record?"></i>
