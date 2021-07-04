@@ -29,7 +29,7 @@ export default {
       if (this.id > 0) {
         this.current = this.id;
       } else {
-        let el = this.data.find((n) => n.id > 0);
+        const el = this.data.find((n) => n.id > 0);
 
         this.current = el.id;
       }
