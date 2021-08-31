@@ -5,19 +5,17 @@
         <img alt="License" src="https://img.shields.io/github/license/Weavous/LaraVueHotels">
     </a>
     <a href="#">
-        <img alt="License" src="https://img.shields.io/github/languages/count/Weavous/LaraVueHotels">
+        <img alt="Languages" src="https://img.shields.io/github/languages/count/Weavous/LaraVueHotels?style=social">
     </a>
     <a href="#">
-        <img alt="License" src="https://img.shields.io/github/last-commit/Weavous/LaraVueHotels">
+        <img alt="Last Commit" src="https://img.shields.io/github/last-commit/Weavous/LaraVueHotels?style=social">
     </a>
     <a href="#">
-        <img alt="License" src="https://img.shields.io/github/followers/MagicalStrangeQuark?style=social">
+        <img alt="Followers" src="https://img.shields.io/github/followers/Weavous?style=social">
     </a>
 </p>
 
 <p align="center">Development of an application to find houses for rent</p>
-
-<h4 align="center">Teste Prático - WebQuarto</h4>
 
 • Crie uma aplicação, usando `Laravel 7+`, `Vue.JS 2+` e `Bootstrap 3` ou `4` que contenha as seguintes funcionalidades:
     
